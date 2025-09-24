@@ -1,0 +1,1432 @@
+ESP-ROM:esp32c3-eco7-20230720
+Build:Jul 20 2023
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x16c4
+load:0x403cc710,len:0xe00
+load:0x403ce710,len:0x3058
+entry 0x403cc71a
+[0;32mI (31) boot: ESP-IDF 5.4.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 24 2025 12:52:41[0m
+[0;32mI (31) boot: chip revision: v1.1[0m
+[0;32mI (31) boot: efuse block revision: v1.3[0m
+[0;32mI (35) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (43) boot.esp32c3: SPI Mode       : QIO[0m
+[0;32mI (47) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (55) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (70) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (77) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (83) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3c030020 size=0df10h ( 57104) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001df38 vaddr=3fc8d000 size=012b4h (  4788) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=0001f1f4 vaddr=40380000 size=00e24h (  3620) load[0m
+[0;32mI (110) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=211b4h (135604) map[0m
+[0;32mI (136) esp_image: segment 4: paddr=000411dc vaddr=40380e24 size=0c0dch ( 49372) load[0m
+[0;32mI (144) esp_image: segment 5: paddr=0004d2c0 vaddr=50000200 size=0001ch (    28) load[0m
+[0;32mI (148) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (148) boot: Disabling RNG early entropy source...[0m
+[0;32mI (161) cpu_start: Unicore app[0m
+[0;32mI (169) cpu_start: Pro cpu start user code[0m
+[0;32mI (170) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (170) app_init: Application information:[0m
+[0;32mI (170) app_init: Project name:     hello_world[0m
+[0;32mI (174) app_init: App version:      1[0m
+[0;32mI (177) app_init: Compile time:     Sep 24 2025 12:47:42[0m
+[0;32mI (182) app_init: ELF file SHA256:  44d08ce44...[0m
+[0;32mI (187) app_init: ESP-IDF:          5.4.1[0m
+[0;32mI (190) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (194) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (198) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (202) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (208) heap_init: At 3FC8FC30 len 000303D0 (192 KiB): RAM[0m
+[0;32mI (213) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (220) heap_init: At 3FCDC710 len 0000294C (10 KiB): Retention RAM[0m
+[0;32mI (226) heap_init: At 5000021C len 00001DCC (7 KiB): RTCRAM[0m
+[0;32mI (231) spi_flash: detected chip: generic[0m
+[0;32mI (235) spi_flash: flash io: qio[0m
+[0;33mW (238) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (250) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (256) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (263) main_task: Started on CPU0[0m
+[0;32mI (273) main_task: Calling app_main()[0m
+Running SPI self-tests...
+[0;32mI (273) SPI_TEST: === Running SPI Self-Tests ===[0m
+[0;32mI (273) SPI_TEST: Test 1: Union memory layout...[0m
+[0;32mI (283) SPI_TEST: Union layout verification successful:[0m
+[0;32mI (283) SPI_TEST:   Total size: 18 bytes[0m
+[0;32mI (293) SPI_TEST:   Status word: 0x1234[0m
+[0;32mI (293) SPI_TEST:   Counter: 0xABCDEF01[0m
+[0;32mI (293) SPI_TEST:   Data values: 3.141590, -2.718280, 1.414210[0m
+[0;32mI (303) SPI_TEST: ✓ Union layout test PASSED[0m
+[0;32mI (303) SPI_TEST: Test 2: Packet validation...[0m
+[0;32mI (313) SPI_TEST: Packet validation tests successful[0m
+[0;32mI (313) SPI_TEST: ✓ Packet validation test PASSED[0m
+[0;32mI (323) SPI_TEST: Test 3: Performance benchmark...[0m
+[0;32mI (323) SPI_TEST: Running performance benchmark...[0m
+[0;32mI (323) SPI_MASTER: === SPI Master Configuration ===[0m
+[0;32mI (333) SPI_MASTER: Host:        SPI2[0m
+[0;32mI (333) SPI_MASTER: Clock:       1000000 Hz[0m
+[0;32mI (343) SPI_MASTER: Mode:        0 (CPOL=0, CPHA=0)[0m
+[0;32mI (343) SPI_MASTER: Packet Size: 18 bytes (9 words)[0m
+[0;32mI (353) SPI_MASTER: GPIO Pins:[0m
+[0;32mI (353) SPI_MASTER:   MISO:      GPIO2[0m
+[0;32mI (353) SPI_MASTER:   MOSI:      GPIO7[0m
+[0;32mI (363) SPI_MASTER:   SCLK:      GPIO6[0m
+[0;32mI (363) SPI_MASTER:   CS:        GPIO10[0m
+[0;32mI (363) SPI_MASTER: Performance:[0m
+[0;32mI (373) SPI_MASTER:   Transfer Time: 144 us[0m
+[0;32mI (373) SPI_MASTER:   Max Frequency: 6944 Hz[0m
+[0;32mI (373) SPI_MASTER: ================================[0m
+[0;32mI (383) SPI_MASTER: SPI Master initialized successfully[0m
+[0;33mW (383) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (393) SPI_TEST: Transaction 0 failed[0m
+[1;31mE (393) SPI_TEST: ✗ Performance test FAILED[0m
+[0;32mI (403) SPI_TEST: === SPI Self-Tests FAILED ===[0m
+SPI self-tests failed - check implementation
+[0;32mI (403) SPI_MASTER: SPI Master already initialized[0m
+SPI Master ready for full-duplex communication
+To test hardware: connect GPIO2 (MISO) to GPIO7 (MOSI)
+[0;33mW (423) SPI_MASTER: Unknown status code: 0x4040[0m
+[1;31mE (423) SPI_MASTER: StateRequest failed - Status: 0x4040 (Unknown status code)[0m
+StateRequest FAILED
+[0;33mW (533) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (533) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+[0;33mW (633) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (633) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+[0;33mW (733) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (733) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+[0;33mW (833) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (833) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+[0;33mW (933) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (933) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+[0;33mW (1033) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (1033) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+[0;33mW (1133) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (1133) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+[0;33mW (1233) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (1233) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+[0;33mW (1333) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (1333) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+[0;33mW (1433) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (1433) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+[0;33mW (1533) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (1533) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+[0;33mW (1633) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (1633) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+[0;33mW (1733) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (1733) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+[0;33mW (1833) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (1833) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+[0;33mW (1933) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (1933) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+[0;33mW (2033) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (2033) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+[0;33mW (2133) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (2133) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+[0;33mW (2233) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (2233) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+[0;33mW (2333) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (2333) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+SPI Stats: 21 transfers, 20 errors
+[0;33mW (2433) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (2433) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+[0;33mW (2533) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (2533) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+[0;33mW (2633) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (2633) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+[0;33mW (2733) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (2733) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+[0;33mW (2833) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (2833) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+[0;33mW (2933) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (2933) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+[0;33mW (3033) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (3033) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+[0;33mW (3133) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (3133) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+[0;33mW (3233) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (3233) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+[0;33mW (3333) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (3333) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+[0;33mW (3433) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (3433) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+[0;33mW (3533) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (3533) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+[0;33mW (3633) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (3633) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+[0;33mW (3733) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (3733) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+[0;33mW (3833) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (3833) SPI_MASTER: StateRequest SPI exchange failed: ESP_ERR_INVALID_RESPONSE[0m
+StateRequest FAILED
+ESP-ROM:esp32c3-eco7-20230720
+Build:Jul 20 2023
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x16c4
+load:0x403cc710,len:0xe00
+load:0x403ce710,len:0x3058
+entry 0x403cc71a
+[0;32mI (31) boot: ESP-IDF 5.4.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 24 2025 12:52:41[0m
+[0;32mI (31) boot: chip revision: v1.1[0m
+[0;32mI (31) boot: efuse block revision: v1.3[0m
+[0;32mI (35) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (43) boot.esp32c3: SPI Mode       : QIO[0m
+[0;32mI (47) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (55) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (70) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (77) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (83) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3c030020 size=0df10h ( 57104) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001df38 vaddr=3fc8d000 size=012b4h (  4788) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=0001f1f4 vaddr=40380000 size=00e24h (  3620) load[0m
+[0;32mI (110) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=211b4h (135604) map[0m
+[0;32mI (136) esp_image: segment 4: paddr=000411dc vaddr=40380e24 size=0c0dch ( 49372) load[0m
+[0;32mI (144) esp_image: segment 5: paddr=0004d2c0 vaddr=50000200 size=0001ch (    28) load[0m
+[0;32mI (148) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (148) boot: Disabling RNG early entropy source...[0m
+[0;32mI (161) cpu_start: Unicore app[0m
+[0;32mI (169) cpu_start: Pro cpu start user code[0m
+[0;32mI (170) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (170) app_init: Application information:[0m
+[0;32mI (170) app_init: Project name:     hello_world[0m
+[0;32mI (174) app_init: App version:      1[0m
+[0;32mI (177) app_init: Compile time:     Sep 24 2025 12:47:42[0m
+[0;32mI (182) app_init: ELF file SHA256:  44d08ce44...[0m
+[0;32mI (187) app_init: ESP-IDF:          5.4.1[0m
+[0;32mI (190) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (194) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (198) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (202) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (208) heap_init: At 3FC8FC30 len 000303D0 (192 KiB): RAM[0m
+[0;32mI (213) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (220) heap_init: At 3FCDC710 len 0000294C (10 KiB): Retention RAM[0m
+[0;32mI (226) heap_init: At 5000021C len 00001DCC (7 KiB): RTCRAM[0m
+[0;32mI (231) spi_flash: detected chip: generic[0m
+[0;32mI (235) spi_flash: flash io: qio[0m
+[0;33mW (238) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (250) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (256) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (263) main_task: Started on CPU0[0m
+[0;32mI (273) main_task: Calling app_main()[0m
+Running SPI self-tests...
+[0;32mI (273) SPI_TEST: === Running SPI Self-Tests ===[0m
+[0;32mI (273) SPI_TEST: Test 1: Union memory layout...[0m
+[0;32mI (283) SPI_TEST: Union layout verification successful:[0m
+[0;32mI (283) SPI_TEST:   Total size: 18 bytes[0m
+[0;32mI (293) SPI_TEST:   Status word: 0x1234[0m
+[0;32mI (293) SPI_TEST:   Counter: 0xABCDEF01[0m
+[0;32mI (293) SPI_TEST:   Data values: 3.141590, -2.718280, 1.414210[0m
+[0;32mI (303) SPI_TEST: ✓ Union layout test PASSED[0m
+[0;32mI (303) SPI_TEST: Test 2: Packet validation...[0m
+[0;32mI (313) SPI_TEST: Packet validation tests successful[0m
+[0;32mI (313) SPI_TEST: ✓ Packet validation test PASSED[0m
+[0;32mI (323) SPI_TEST: Test 3: Performance benchmark...[0m
+[0;32mI (323) SPI_TEST: Running performance benchmark...[0m
+[0;32mI (323) SPI_MASTER: === SPI Master Configuration ===[0m
+[0;32mI (333) SPI_MASTER: Host:        SPI2[0m
+[0;32mI (333) SPI_MASTER: Clock:       1000000 Hz[0m
+[0;32mI (343) SPI_MASTER: Mode:        0 (CPOL=0, CPHA=0)[0m
+[0;32mI (343) SPI_MASTER: Packet Size: 18 bytes (9 words)[0m
+[0;32mI (353) SPI_MASTER: GPIO Pins:[0m
+[0;32mI (353) SPI_MASTER:   MISO:      GPIO2[0m
+[0;32mI (353) SPI_MASTER:   MOSI:      GPIO7[0m
+[0;32mI (363) SPI_MASTER:   SCLK:      GPIO6[0m
+[0;32mI (363) SPI_MASTER:   CS:        GPIO10[0m
+[0;32mI (363) SPI_MASTER: Performance:[0m
+[0;32mI (373) SPI_MASTER:   Transfer Time: 144 us[0m
+[0;32mI (373) SPI_MASTER:   Max Frequency: 6944 Hz[0m
+[0;32mI (373) SPI_MASTER: ================================[0m
+[0;32mI (383) SPI_MASTER: SPI Master initialized successfully[0m
+[0;32mI (403) SPI_TEST: Performance Results:[0m
+[0;32mI (403) SPI_TEST:   Transactions: 100[0m
+[0;32mI (403) SPI_TEST:   Total time: 18117 us[0m
+[0;32mI (403) SPI_TEST:   Average time: 181 us per transaction[0m
+[0;32mI (413) SPI_TEST:   Theoretical minimum: 144 us[0m
+[0;32mI (413) SPI_TEST:   Efficiency: 79.6%[0m
+[0;32mI (413) SPI_TEST:   Throughput: 5524.9 transactions/sec[0m
+[0;32mI (423) SPI_TEST: ✓ Performance test PASSED[0m
+[0;32mI (423) SPI_TEST: === SPI Self-Tests COMPLETED SUCCESSFULLY ===[0m
+SPI self-tests completed successfully
+[0;32mI (433) SPI_MASTER: SPI Master already initialized[0m
+SPI Master ready for full-duplex communication
+To test hardware: connect GPIO2 (MISO) to GPIO7 (MOSI)
+[0;32mI (453) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (453) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (463) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (483) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (603) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (603) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (603) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (623) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (743) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (743) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (743) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (763) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (883) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (883) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (883) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (903) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (1023) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (1023) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (1023) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (1043) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (1163) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (1163) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (1163) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (1183) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (1303) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (1303) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (1303) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (1323) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (1443) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (1443) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (1443) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (1463) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (1583) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (1583) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (1583) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (1603) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (1723) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (1723) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (1723) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (1743) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (1863) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (1863) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (1863) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (1883) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (2003) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (2003) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (2003) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (2023) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (2143) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (2143) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (2143) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (2163) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (2283) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (2283) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (2283) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (2303) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (2423) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (2423) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (2423) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (2443) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (2563) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (2563) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (2563) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (2583) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (2703) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (2703) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (2703) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (2723) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (2843) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (2843) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (2843) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (2863) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (2983) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (2983) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (2983) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (3003) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (3123) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (3123) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (3123) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (3143) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+SPI Stats: 140 transfers, 0 errors
+[0;32mI (3263) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (3263) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (3263) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (3283) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (3403) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (3403) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (3403) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (3423) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (3543) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (3543) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (3543) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (3563) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (3683) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (3683) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (3683) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (3703) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (3823) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (3823) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (3823) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (3843) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (3963) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (3963) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (3963) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (3983) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (4103) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (4103) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (4103) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (4123) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (4243) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (4243) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (4243) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (4263) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (4383) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (4383) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (4383) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (4403) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (4523) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (4523) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (4523) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (4543) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (4663) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (4663) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (4663) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (4683) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (4803) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (4803) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (4803) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (4823) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (4943) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (4943) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (4943) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (4963) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (5083) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (5083) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (5083) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (5103) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (5223) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (5223) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (5223) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (5243) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (5363) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (5363) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (5363) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (5383) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (5503) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (5503) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (5503) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (5523) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (5643) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (5643) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (5643) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (5663) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (5783) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (5783) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (5783) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (5803) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (5923) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (5923) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (5923) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (5943) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+SPI Stats: 180 transfers, 0 errors
+[0;32mI (6063) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (6063) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (6063) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (6083) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (6203) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (6203) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (6203) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (6223) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (6343) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (6343) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (6343) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (6363) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (6483) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (6483) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (6483) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (6503) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (6623) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (6623) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (6623) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (6643) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (6763) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (6763) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (6763) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (6783) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (6903) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (6903) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (6903) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (6923) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (7043) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (7043) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (7043) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (7063) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (7183) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (7183) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (7183) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (7203) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (7323) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (7323) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (7323) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (7343) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (7463) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (7463) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (7463) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (7483) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (7603) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (7603) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (7603) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (7623) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (7743) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (7743) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (7743) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (7763) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (7883) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (7883) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (7883) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (7903) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (8023) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (8023) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (8023) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (8043) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (8163) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (8163) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (8163) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (8183) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (8303) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (8303) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (8303) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (8323) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (8443) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (8443) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (8443) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (8463) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (8583) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (8583) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (8583) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (8603) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (8723) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (8723) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (8723) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (8743) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+SPI Stats: 220 transfers, 0 errors
+[0;32mI (8863) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (8863) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (8863) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (8883) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (9003) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (9003) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (9003) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (9023) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (9143) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (9143) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (9143) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (9163) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (9283) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (9283) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (9283) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (9303) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (9423) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (9423) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (9423) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (9443) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (9563) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (9563) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (9563) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (9583) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (9703) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (9703) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (9703) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (9723) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (9843) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (9843) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (9843) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (9863) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (9983) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (9983) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (9983) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (10003) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (10123) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (10123) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (10123) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (10143) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (10263) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (10263) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (10263) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (10283) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (10403) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (10403) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (10403) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (10423) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (10543) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (10543) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (10543) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (10563) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (10683) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (10683) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (10683) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (10703) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (10823) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (10823) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (10823) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (10843) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (10963) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (10963) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (10963) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (10983) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (11103) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (11103) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (11103) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (11123) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (11243) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (11243) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (11243) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (11263) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (11383) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (11383) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (11383) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (11403) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (11523) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (11523) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (11523) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (11543) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+SPI Stats: 260 transfers, 0 errors
+[0;32mI (11663) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (11663) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (11663) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (11683) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (11803) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (11803) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (11803) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (11823) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (11943) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (11943) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (11943) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (11963) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (12083) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (12083) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (12083) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (12103) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (12223) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (12223) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (12223) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (12243) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (12363) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (12363) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (12363) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (12383) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (12503) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (12503) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (12503) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (12523) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (12643) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (12643) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (12643) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (12663) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (12783) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (12783) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (12783) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (12803) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (12923) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (12923) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (12923) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (12943) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (13063) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (13063) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (13063) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (13083) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (13203) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (13203) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (13203) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (13223) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (13343) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (13343) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (13343) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (13363) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (13483) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (13483) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (13483) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (13503) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (13623) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (13623) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (13623) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (13643) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (13763) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (13763) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (13763) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (13783) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (13903) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (13903) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (13903) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (13923) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (14043) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (14043) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (14043) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (14063) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (14183) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (14183) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (14183) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (14203) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (14323) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (14323) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (14323) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (14343) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+SPI Stats: 300 transfers, 0 errors
+[0;32mI (14463) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (14463) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (14463) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (14483) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (14603) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (14603) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (14603) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (14623) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (14743) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (14743) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (14743) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (14763) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (14883) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (14883) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (14883) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (14903) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (15023) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (15023) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (15023) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (15043) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (15163) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (15163) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (15163) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (15183) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (15303) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (15303) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (15303) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (15323) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (15443) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (15443) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (15443) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (15463) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (15583) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (15583) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (15583) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (15603) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (15723) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (15723) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (15723) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (15743) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (15863) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (15863) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (15863) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (15883) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (16003) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (16003) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (16003) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (16023) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (16143) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (16143) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (16143) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (16163) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (16283) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (16283) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (16283) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (16303) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (16423) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (16423) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (16423) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (16443) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (16563) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (16563) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (16563) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (16583) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (16703) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (16703) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (16703) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (16723) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (16843) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (16843) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (16843) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (16863) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (16983) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (16983) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (16983) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (17003) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (17123) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (17123) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (17123) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (17143) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+SPI Stats: 340 transfers, 0 errors
+[0;32mI (17263) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (17263) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (17263) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (17283) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (17403) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (17403) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (17403) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (17423) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (17543) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (17543) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (17543) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (17563) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (17683) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (17683) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (17683) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (17703) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (17823) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (17823) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (17823) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (17843) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (17963) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (17963) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (17963) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (17983) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (18103) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (18103) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (18103) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (18123) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (18243) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (18243) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (18243) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (18263) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (18383) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (18383) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (18383) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (18403) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (18523) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (18523) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (18523) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (18543) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (18663) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (18663) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (18663) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (18683) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (18803) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (18803) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (18803) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (18823) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (18943) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (18943) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (18943) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (18963) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (19083) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (19083) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (19083) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (19103) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (19223) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (19223) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (19223) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (19243) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (19363) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (19363) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (19363) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (19383) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (19503) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (19503) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (19503) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (19523) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (19643) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (19643) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (19643) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (19663) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (19783) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (19783) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (19783) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (19803) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (19923) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (19923) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (19923) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (19943) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+SPI Stats: 380 transfers, 0 errors
+[0;32mI (20063) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (20063) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (20063) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (20083) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (20203) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (20203) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (20203) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (20223) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (20343) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (20343) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (20343) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (20363) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (20483) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (20483) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (20483) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (20503) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (20623) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (20623) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (20623) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (20643) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (20763) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (20763) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (20763) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (20783) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (20903) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (20903) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (20903) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (20923) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (21043) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (21043) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (21043) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (21063) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (21183) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (21183) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (21183) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (21203) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (21323) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (21323) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (21323) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (21343) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (21463) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (21463) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (21463) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (21483) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (21603) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (21603) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (21603) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (21623) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (21743) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (21743) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (21743) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (21763) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (21883) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (21883) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (21883) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (21903) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (22023) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (22023) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (22023) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (22043) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (22163) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (22163) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (22163) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (22183) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (22303) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (22303) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (22303) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (22323) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (22443) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (22443) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (22443) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (22463) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (22583) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (22583) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (22583) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (22603) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+[0;32mI (22723) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (22723) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (22723) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (22743) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309
+SPI Stats: 420 transfers, 0 errors
+[0;32mI (22863) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (22863) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (22863) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 572657937, Values: 784.800, 271929597300444233728000.000, -0.000[0m
+StateRequest OK - Counter: 572657937, Sensors: [784.800, 271929597300444233728000.000, -0.000]
+[0;32mI (22883) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x22221111[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 784.799988, y_value: -1.118309

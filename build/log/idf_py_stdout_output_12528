@@ -1,0 +1,936 @@
+ESP-ROM:esp32c3-eco7-20230720
+Build:Jul 20 2023
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x16c4
+load:0x403cc710,len:0xe00
+load:0x403ce710,len:0x3058
+entry 0x403cc71a
+[0;32mI (31) boot: ESP-IDF 5.4.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 24 2025 12:52:41[0m
+[0;32mI (31) boot: chip revision: v1.1[0m
+[0;32mI (31) boot: efuse block revision: v1.3[0m
+[0;32mI (35) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (43) boot.esp32c3: SPI Mode       : QIO[0m
+[0;32mI (47) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (55) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (70) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (77) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (83) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3c030020 size=0de38h ( 56888) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001de60 vaddr=3fc8d000 size=012b4h (  4788) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=0001f11c vaddr=40380000 size=00efch (  3836) load[0m
+[0;32mI (110) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=21104h (135428) map[0m
+[0;32mI (136) esp_image: segment 4: paddr=0004112c vaddr=40380efc size=0c004h ( 49156) load[0m
+[0;32mI (144) esp_image: segment 5: paddr=0004d138 vaddr=50000200 size=0001ch (    28) load[0m
+[0;32mI (148) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (148) boot: Disabling RNG early entropy source...[0m
+[0;32mI (161) cpu_start: Unicore app[0m
+[0;32mI (169) cpu_start: Pro cpu start user code[0m
+[0;32mI (169) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (170) app_init: Application information:[0m
+[0;32mI (170) app_init: Project name:     hello_world[0m
+[0;32mI (174) app_init: App version:      1[0m
+[0;32mI (177) app_init: Compile time:     Sep 24 2025 12:47:42[0m
+[0;32mI (182) app_init: ELF file SHA256:  ac67f2642...[0m
+[0;32mI (187) app_init: ESP-IDF:          5.4.1[0m
+[0;32mI (190) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (194) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (198) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (202) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (208) heap_init: At 3FC8FC30 len 000303D0 (192 KiB): RAM[0m
+[0;32mI (213) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (219) heap_init: At 3FCDC710 len 0000294C (10 KiB): Retention RAM[0m
+[0;32mI (225) heap_init: At 5000021C len 00001DCC (7 KiB): RTCRAM[0m
+[0;32mI (231) spi_flash: detected chip: generic[0m
+[0;32mI (234) spi_flash: flash io: qio[0m
+[0;33mW (237) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (250) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (256) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (263) main_task: Started on CPU0[0m
+[0;32mI (273) main_task: Calling app_main()[0m
+Running SPI self-tests...
+[0;32mI (273) SPI_TEST: === Running SPI Self-Tests ===[0m
+[0;32mI (273) SPI_TEST: Test 1: Union memory layout...[0m
+[0;32mI (283) SPI_TEST: Union layout verification successful:[0m
+[0;32mI (283) SPI_TEST:   Total size: 18 bytes[0m
+[0;32mI (293) SPI_TEST:   Status word: 0x1234[0m
+[0;32mI (293) SPI_TEST:   Counter: 0xABCDEF01[0m
+[0;32mI (293) SPI_TEST:   Data values: 3.141590, -2.718280, 1.414210[0m
+[0;32mI (303) SPI_TEST: ✓ Union layout test PASSED[0m
+[0;32mI (303) SPI_TEST: Test 2: Packet validation...[0m
+[0;32mI (313) SPI_TEST: Packet validation tests successful[0m
+[0;32mI (313) SPI_TEST: ✓ Packet validation test PASSED[0m
+[0;32mI (323) SPI_TEST: Test 3: Performance benchmark...[0m
+[0;32mI (323) SPI_TEST: Running performance benchmark...[0m
+[0;32mI (323) SPI_MASTER: === SPI Master Configuration ===[0m
+[0;32mI (333) SPI_MASTER: Host:        SPI2[0m
+[0;32mI (333) SPI_MASTER: Clock:       1000000 Hz[0m
+[0;32mI (343) SPI_MASTER: Mode:        0 (CPOL=0, CPHA=0)[0m
+[0;32mI (343) SPI_MASTER: Packet Size: 18 bytes (9 words)[0m
+[0;32mI (353) SPI_MASTER: GPIO Pins:[0m
+[0;32mI (353) SPI_MASTER:   MISO:      GPIO2[0m
+[0;32mI (353) SPI_MASTER:   MOSI:      GPIO7[0m
+[0;32mI (363) SPI_MASTER:   SCLK:      GPIO6[0m
+[0;32mI (363) SPI_MASTER:   CS:        GPIO10[0m
+[0;32mI (363) SPI_MASTER: Performance:[0m
+[0;32mI (373) SPI_MASTER:   Transfer Time: 144 us[0m
+[0;32mI (373) SPI_MASTER:   Max Frequency: 6944 Hz[0m
+[0;32mI (373) SPI_MASTER: ================================[0m
+[0;32mI (383) SPI_MASTER: SPI Master initialized successfully[0m
+[0;32mI (403) SPI_TEST: Performance Results:[0m
+[0;32mI (403) SPI_TEST:   Transactions: 100[0m
+[0;32mI (403) SPI_TEST:   Total time: 18122 us[0m
+[0;32mI (403) SPI_TEST:   Average time: 181 us per transaction[0m
+[0;32mI (413) SPI_TEST:   Theoretical minimum: 144 us[0m
+[0;32mI (413) SPI_TEST:   Efficiency: 79.6%[0m
+[0;32mI (413) SPI_TEST:   Throughput: 5524.9 transactions/sec[0m
+[0;32mI (423) SPI_TEST: ✓ Performance test PASSED[0m
+[0;32mI (423) SPI_TEST: === SPI Self-Tests COMPLETED SUCCESSFULLY ===[0m
+SPI self-tests completed successfully
+[0;32mI (433) SPI_MASTER: SPI Master already initialized[0m
+SPI Master ready for full-duplex communication
+To test hardware: connect GPIO2 (MISO) to GPIO7 (MOSI)
+[0;32mI (453) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (473) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (593) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (603) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (723) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (733) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (853) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (863) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (983) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (993) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (1113) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (1123) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (1243) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (1253) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (1373) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (1383) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (1503) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (1513) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (1633) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (1643) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (1763) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (1773) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (1893) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (1903) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (2023) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (2033) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (2153) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (2163) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (2283) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (2293) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (2413) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (2423) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (2543) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (2553) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (2673) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (2683) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (2803) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (2813) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (2933) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (2943) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+SPI Stats: 140 transfers, 0 errors
+[0;32mI (3063) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (3073) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (3193) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (3203) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (3323) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (3333) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (3453) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (3463) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (3583) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (3593) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (3713) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (3723) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (3843) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (3853) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (3973) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (3983) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (4103) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (4113) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (4233) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (4243) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (4363) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (4373) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (4493) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (4503) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (4623) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (4633) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (4753) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (4763) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (4883) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (4893) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (5013) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (5023) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (5143) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (5153) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (5273) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (5283) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (5403) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (5413) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (5533) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (5543) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+SPI Stats: 180 transfers, 0 errors
+[0;32mI (5663) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (5673) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (5793) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (5803) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (5923) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (5933) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (6053) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (6063) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (6183) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (6193) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (6313) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (6323) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (6443) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (6453) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (6573) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (6583) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (6703) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (6713) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (6833) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (6843) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (6963) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (6973) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (7093) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (7103) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (7223) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (7233) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (7353) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (7363) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (7483) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (7493) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (7613) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (7623) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (7743) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (7753) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (7873) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (7883) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (8003) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (8013) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (8133) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (8143) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+SPI Stats: 220 transfers, 0 errors
+[0;32mI (8263) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (8273) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (8393) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (8403) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (8523) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (8533) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (8653) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (8663) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (8783) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (8793) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (8913) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (8923) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (9043) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (9053) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (9173) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (9183) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (9303) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (9313) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (9433) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (9443) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (9563) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (9573) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (9693) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (9703) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (9823) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (9833) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (9953) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (9963) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (10083) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (10093) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (10213) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (10223) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (10343) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (10353) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (10473) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (10483) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (10603) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (10613) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (10733) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (10743) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+SPI Stats: 260 transfers, 0 errors
+[0;32mI (10863) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (10873) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (10993) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (11003) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (11123) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (11133) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (11253) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (11263) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (11383) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (11393) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (11513) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (11523) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (11643) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (11653) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (11773) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (11783) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (11903) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (11913) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (12033) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (12043) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (12163) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (12173) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (12293) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (12303) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (12423) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (12433) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (12553) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (12563) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (12683) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (12693) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (12813) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (12823) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (12943) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (12953) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (13073) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (13083) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (13203) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (13213) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (13333) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (13343) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+SPI Stats: 300 transfers, 0 errors
+[0;32mI (13463) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (13473) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (13593) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (13603) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (13723) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (13733) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (13853) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (13863) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (13983) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (13993) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (14113) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (14123) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (14243) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (14253) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (14373) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (14383) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (14503) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (14513) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (14633) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (14643) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (14763) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (14773) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (14893) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (14903) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (15023) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (15033) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (15153) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (15163) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (15283) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (15293) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (15413) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (15423) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (15543) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (15553) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (15673) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (15683) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (15803) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (15813) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (15933) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (15943) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+SPI Stats: 340 transfers, 0 errors
+[0;32mI (16063) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (16073) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (16193) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (16203) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (16323) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (16333) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (16453) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (16463) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (16583) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (16593) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (16713) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (16723) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (16843) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (16853) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (16973) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (16983) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (17103) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (17113) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (17233) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (17243) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (17363) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (17373) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (17493) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (17503) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (17623) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (17633) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (17753) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (17763) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (17883) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (17893) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (18013) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (18023) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (18143) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (18153) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (18273) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (18283) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (18403) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (18413) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (18533) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (18543) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+SPI Stats: 380 transfers, 0 errors
+[0;32mI (18663) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (18673) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (18793) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (18803) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (18923) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (18933) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (19053) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (19063) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (19183) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (19193) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (19313) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (19323) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (19443) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (19453) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (19573) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (19583) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (19703) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (19713) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (19833) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (19843) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (19963) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (19973) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (20093) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (20103) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (20223) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (20233) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (20353) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (20363) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (20483) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (20493) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (20613) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (20623) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (20743) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (20753) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (20873) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (20883) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (21003) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (21013) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (21133) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (21143) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+SPI Stats: 420 transfers, 0 errors
+[0;32mI (21263) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (21273) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (21393) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (21403) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (21523) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (21533) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (21653) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (21663) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (21783) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (21793) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000
+[0;32mI (21913) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[0;32mI (21923) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x000003E8, Slave Response: 0x11112222[0m
+Action OK - ML result: 0.000 → Action: 0x000003E8 sent to slave
+x_value: 0.000000, y_value: 0.000000

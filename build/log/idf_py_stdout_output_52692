@@ -1,0 +1,637 @@
+ESP-ROM:esp32c3-eco7-20230720
+Build:Jul 20 2023
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x16c4
+load:0x403cc710,len:0xe00
+load:0x403ce710,len:0x3058
+entry 0x403cc71a
+[0;32mI (31) boot: ESP-IDF 5.4.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 24 2025 12:52:41[0m
+[0;32mI (31) boot: chip revision: v1.1[0m
+[0;32mI (31) boot: efuse block revision: v1.3[0m
+[0;32mI (35) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (43) boot.esp32c3: SPI Mode       : QIO[0m
+[0;32mI (47) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (55) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (70) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (77) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (83) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3c030020 size=0e000h ( 57344) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001e028 vaddr=3fc8d000 size=012b4h (  4788) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=0001f2e4 vaddr=40380000 size=00d34h (  3380) load[0m
+[0;32mI (110) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=21260h (135776) map[0m
+[0;32mI (136) esp_image: segment 4: paddr=00041288 vaddr=40380d34 size=0c1cch ( 49612) load[0m
+[0;32mI (144) esp_image: segment 5: paddr=0004d45c vaddr=50000200 size=0001ch (    28) load[0m
+[0;32mI (148) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (148) boot: Disabling RNG early entropy source...[0m
+[0;32mI (161) cpu_start: Unicore app[0m
+[0;32mI (170) cpu_start: Pro cpu start user code[0m
+[0;32mI (170) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (170) app_init: Application information:[0m
+[0;32mI (170) app_init: Project name:     hello_world[0m
+[0;32mI (174) app_init: App version:      1[0m
+[0;32mI (177) app_init: Compile time:     Sep 24 2025 12:47:42[0m
+[0;32mI (182) app_init: ELF file SHA256:  3fb812af6...[0m
+[0;32mI (187) app_init: ESP-IDF:          5.4.1[0m
+[0;32mI (190) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (194) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (198) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (202) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (208) heap_init: At 3FC8FC30 len 000303D0 (192 KiB): RAM[0m
+[0;32mI (213) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (220) heap_init: At 3FCDC710 len 0000294C (10 KiB): Retention RAM[0m
+[0;32mI (226) heap_init: At 5000021C len 00001DCC (7 KiB): RTCRAM[0m
+[0;32mI (231) spi_flash: detected chip: generic[0m
+[0;32mI (235) spi_flash: flash io: qio[0m
+[0;33mW (238) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (250) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (256) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (263) main_task: Started on CPU0[0m
+[0;32mI (273) main_task: Calling app_main()[0m
+Running SPI self-tests...
+[0;32mI (273) SPI_TEST: === Running SPI Self-Tests ===[0m
+[0;32mI (273) SPI_TEST: Test 1: Union memory layout...[0m
+[0;32mI (283) SPI_TEST: Union layout verification successful:[0m
+[0;32mI (283) SPI_TEST:   Total size: 18 bytes[0m
+[0;32mI (293) SPI_TEST:   Status word: 0x1234[0m
+[0;32mI (293) SPI_TEST:   Counter: 0xABCDEF01[0m
+[0;32mI (293) SPI_TEST:   Data values: 3.141590, -2.718280, 1.414210[0m
+[0;32mI (303) SPI_TEST: ✓ Union layout test PASSED[0m
+[0;32mI (303) SPI_TEST: Test 2: Packet validation...[0m
+[0;32mI (313) SPI_TEST: Packet validation tests successful[0m
+[0;32mI (313) SPI_TEST: ✓ Packet validation test PASSED[0m
+[0;32mI (323) SPI_TEST: Test 3: Performance benchmark...[0m
+[0;32mI (323) SPI_TEST: Running performance benchmark...[0m
+[0;32mI (323) SPI_MASTER: === SPI Master Configuration ===[0m
+[0;32mI (333) SPI_MASTER: Host:        SPI2[0m
+[0;32mI (333) SPI_MASTER: Clock:       1000000 Hz[0m
+[0;32mI (343) SPI_MASTER: Mode:        0 (CPOL=0, CPHA=0)[0m
+[0;32mI (343) SPI_MASTER: Packet Size: 18 bytes (9 words)[0m
+[0;32mI (353) SPI_MASTER: GPIO Pins:[0m
+[0;32mI (353) SPI_MASTER:   MISO:      GPIO2[0m
+[0;32mI (353) SPI_MASTER:   MOSI:      GPIO7[0m
+[0;32mI (363) SPI_MASTER:   SCLK:      GPIO6[0m
+[0;32mI (363) SPI_MASTER:   CS:        GPIO10[0m
+[0;32mI (363) SPI_MASTER: Performance:[0m
+[0;32mI (373) SPI_MASTER:   Transfer Time: 144 us[0m
+[0;32mI (373) SPI_MASTER:   Max Frequency: 6944 Hz[0m
+[0;32mI (373) SPI_MASTER: ================================[0m
+[0;32mI (383) SPI_MASTER: SPI Master initialized successfully[0m
+[0;32mI (383) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (393) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (393) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;33mW (403) SPI_MASTER: Received packet validation failed[0m
+[1;31mE (413) SPI_TEST: Transaction 0 failed[0m
+[1;31mE (413) SPI_TEST: ✗ Performance test FAILED[0m
+[0;32mI (413) SPI_TEST: === SPI Self-Tests FAILED ===[0m
+SPI self-tests failed - check implementation
+[0;32mI (423) SPI_MASTER: SPI Master already initialized[0m
+SPI Master ready for full-duplex communication
+To test hardware: connect GPIO2 (MISO) to GPIO7 (MOSI)
+[0;32mI (443) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (443) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (453) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (453) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (463) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (473) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (483) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (483) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (503) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (503) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (513) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (523) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (633) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (633) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (633) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (633) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (643) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (653) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (663) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (663) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (683) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (683) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (693) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (693) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (813) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (813) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (813) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (813) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (823) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (833) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (843) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (843) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (863) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (863) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (873) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (873) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (993) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (993) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (993) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (993) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (1003) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (1013) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (1023) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (1023) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (1043) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (1043) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (1053) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (1053) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (1173) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (1173) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (1173) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (1173) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (1183) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (1193) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (1203) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (1203) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (1223) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (1223) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (1233) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (1243) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (1353) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (1353) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (1353) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (1353) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (1363) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (1373) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (1383) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (1383) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (1403) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (1403) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (1413) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (1423) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (1533) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (1533) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (1533) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (1533) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (1543) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (1553) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (1563) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (1563) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (1583) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (1583) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (1593) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (1603) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (1713) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (1713) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (1713) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (1713) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (1723) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (1733) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (1743) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (1743) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (1763) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (1763) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (1773) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (1783) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (1893) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (1893) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (1893) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (1893) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (1903) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (1913) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (1923) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (1923) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (1943) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (1943) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (1953) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (1963) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (2073) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (2073) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (2073) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (2073) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (2083) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (2093) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (2103) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (2103) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (2123) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (2123) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (2133) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (2143) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (2253) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (2253) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (2253) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (2253) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (2263) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (2273) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (2283) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (2283) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (2303) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (2303) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (2313) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (2323) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (2433) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (2433) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (2433) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (2433) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (2443) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (2453) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (2463) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (2463) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (2483) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (2483) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (2493) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (2503) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (2613) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (2613) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (2613) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (2613) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (2623) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (2633) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (2643) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (2643) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (2663) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (2663) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (2673) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (2683) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (2793) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (2793) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (2793) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (2793) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (2803) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (2813) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (2823) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (2823) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (2843) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (2843) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (2853) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (2863) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (2973) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (2973) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (2973) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (2973) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (2983) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (2993) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (3003) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (3003) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (3023) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (3023) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (3033) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (3043) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (3153) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (3153) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (3153) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (3153) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (3163) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (3173) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (3183) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (3183) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (3203) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (3203) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (3213) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (3223) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (3333) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (3333) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (3333) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (3333) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (3343) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (3353) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (3363) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (3363) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (3383) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (3383) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (3393) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (3403) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (3513) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (3513) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (3513) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (3513) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (3523) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (3533) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (3543) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (3543) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (3563) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (3563) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (3573) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (3583) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (3693) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (3693) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (3693) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (3693) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (3703) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (3713) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (3723) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (3723) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (3743) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (3743) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (3753) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (3763) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (3873) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (3873) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (3873) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (3873) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (3883) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (3893) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (3903) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (3903) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (3923) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (3923) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (3933) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (3943) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+SPI Stats: 41 transfers, 1 errors
+[0;32mI (4063) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (4063) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (4063) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (4063) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (4073) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (4083) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (4093) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (4093) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (4113) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (4113) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (4123) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (4133) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (4243) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (4243) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (4243) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (4243) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (4253) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (4263) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (4273) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (4273) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (4293) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (4293) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (4303) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (4313) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (4423) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (4423) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (4423) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (4423) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (4433) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (4443) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (4453) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (4453) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (4473) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (4473) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (4483) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (4493) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (4603) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (4603) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (4603) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (4603) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (4613) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (4623) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (4633) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (4633) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (4653) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (4653) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (4663) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (4673) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (4783) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (4783) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (4783) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (4783) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (4793) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (4803) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (4813) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (4813) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (4833) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (4833) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (4843) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (4853) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (4963) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (4963) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (4963) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (4963) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (4973) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (4983) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (4993) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (4993) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (5013) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (5013) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (5023) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (5033) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (5143) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (5143) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (5143) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (5143) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (5153) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (5163) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (5173) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (5173) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (5193) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (5193) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (5203) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (5213) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (5323) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (5323) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (5323) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (5323) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (5333) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (5343) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (5353) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (5353) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (5373) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (5373) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (5383) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (5393) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (5503) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (5503) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (5503) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (5503) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (5513) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (5523) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (5533) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (5533) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (5553) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (5553) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (5563) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (5573) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (5683) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (5683) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (5683) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (5683) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (5693) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (5703) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (5713) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (5713) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (5733) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (5733) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (5743) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (5753) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (5863) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (5863) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (5863) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (5863) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (5873) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (5883) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (5893) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (5893) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (5913) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (5913) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (5923) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (5933) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (6043) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (6043) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (6043) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (6043) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (6053) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (6063) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (6073) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (6073) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (6093) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (6093) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (6103) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (6113) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (6223) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (6223) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (6223) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (6223) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (6233) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (6243) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (6253) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (6253) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (6273) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (6273) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (6283) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (6293) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (6403) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (6403) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (6403) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (6403) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (6413) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (6423) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (6433) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (6433) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (6453) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (6453) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (6463) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (6473) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (6583) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (6583) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (6583) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (6583) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (6593) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (6603) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (6613) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (6613) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (6633) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (6633) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (6643) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (6653) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309
+[0;32mI (6763) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (6763) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (6763) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (6763) SPI_MASTER: RX Raw Words: [0x00A0, 0x0000, 0x0001, 0x4131, 0xC28F, 0x41B1, 0xC28F, 0x4205, 0x51EC][0m
+[0;32mI (6773) SPI_MASTER: RX Raw Bytes: [A0 00 00 00 01 00 31 41 8F C2 B1 41 8F C2 05 42 EC 51][0m
+[0;32mI (6783) SPI_MASTER: Big-Endian Parse - Counter: 0x00000001 (1)[0m
+[0;32mI (6793) SPI_MASTER: Float Hex Values: [0x4131C28F, 0x41B1C28F, 0x420551EC][0m
+[0;32mI (6793) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 1, Values: 11.110, 22.220, 33.330[0m
+StateRequest OK - Counter: 1, Sensors: [11.110, 22.220, 33.330]
+[0;32mI (6813) SPI_MASTER: DEBUG: TX converted to MSB first for slave[0m
+[0;32mI (6813) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (6823) SPI_MASTER: DEBUG: RX converted from MSB first to Little-Endian[0m
+[0;32mI (6833) SPI_MASTER: Action command OK - Status: 0x00A0, Sent Action: 0x00000000, Slave Response: 0x00010000[0m
+Action OK - ML result: -1.118 → Action: 0x00000000 sent to slave
+x_value: 11.110000, y_value: -1.118309

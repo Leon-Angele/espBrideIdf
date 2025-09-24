@@ -1,0 +1,605 @@
+ESP-ROM:esp32c3-eco7-20230720
+Build:Jul 20 2023
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x16c4
+load:0x403cc710,len:0xe00
+load:0x403ce710,len:0x3058
+entry 0x403cc71a
+[0;32mI (31) boot: ESP-IDF 5.4.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 24 2025 12:52:41[0m
+[0;32mI (31) boot: chip revision: v1.1[0m
+[0;32mI (31) boot: efuse block revision: v1.3[0m
+[0;32mI (35) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (39) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (43) boot.esp32c3: SPI Mode       : QIO[0m
+[0;32mI (47) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (55) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (70) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (77) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (83) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3c030020 size=0df70h ( 57200) map[0m
+[0;32mI (102) esp_image: segment 1: paddr=0001df98 vaddr=3fc8d000 size=012b4h (  4788) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=0001f254 vaddr=40380000 size=00dc4h (  3524) load[0m
+[0;32mI (110) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=211fch (135676) map[0m
+[0;32mI (136) esp_image: segment 4: paddr=00041224 vaddr=40380dc4 size=0c13ch ( 49468) load[0m
+[0;32mI (144) esp_image: segment 5: paddr=0004d368 vaddr=50000200 size=0001ch (    28) load[0m
+[0;32mI (148) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (148) boot: Disabling RNG early entropy source...[0m
+[0;32mI (161) cpu_start: Unicore app[0m
+[0;32mI (169) cpu_start: Pro cpu start user code[0m
+[0;32mI (170) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (170) app_init: Application information:[0m
+[0;32mI (170) app_init: Project name:     hello_world[0m
+[0;32mI (174) app_init: App version:      1[0m
+[0;32mI (177) app_init: Compile time:     Sep 24 2025 12:47:42[0m
+[0;32mI (182) app_init: ELF file SHA256:  511df92dc...[0m
+[0;32mI (187) app_init: ESP-IDF:          5.4.1[0m
+[0;32mI (190) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (194) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (198) efuse_init: Chip rev:         v1.1[0m
+[0;32mI (202) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (208) heap_init: At 3FC8FC30 len 000303D0 (192 KiB): RAM[0m
+[0;32mI (213) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (220) heap_init: At 3FCDC710 len 0000294C (10 KiB): Retention RAM[0m
+[0;32mI (226) heap_init: At 5000021C len 00001DCC (7 KiB): RTCRAM[0m
+[0;32mI (231) spi_flash: detected chip: generic[0m
+[0;32mI (235) spi_flash: flash io: qio[0m
+[0;33mW (238) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (250) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (256) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (263) main_task: Started on CPU0[0m
+[0;32mI (273) main_task: Calling app_main()[0m
+Running SPI self-tests...
+[0;32mI (273) SPI_TEST: === Running SPI Self-Tests ===[0m
+[0;32mI (273) SPI_TEST: Test 1: Union memory layout...[0m
+[0;32mI (283) SPI_TEST: Union layout verification successful:[0m
+[0;32mI (283) SPI_TEST:   Total size: 18 bytes[0m
+[0;32mI (293) SPI_TEST:   Status word: 0x1234[0m
+[0;32mI (293) SPI_TEST:   Counter: 0xABCDEF01[0m
+[0;32mI (293) SPI_TEST:   Data values: 3.141590, -2.718280, 1.414210[0m
+[0;32mI (303) SPI_TEST: ✓ Union layout test PASSED[0m
+[0;32mI (303) SPI_TEST: Test 2: Packet validation...[0m
+[0;32mI (313) SPI_TEST: Packet validation tests successful[0m
+[0;32mI (313) SPI_TEST: ✓ Packet validation test PASSED[0m
+[0;32mI (323) SPI_TEST: Test 3: Performance benchmark...[0m
+[0;32mI (323) SPI_TEST: Running performance benchmark...[0m
+[0;32mI (323) SPI_MASTER: === SPI Master Configuration ===[0m
+[0;32mI (333) SPI_MASTER: Host:        SPI2[0m
+[0;32mI (333) SPI_MASTER: Clock:       1000000 Hz[0m
+[0;32mI (343) SPI_MASTER: Mode:        0 (CPOL=0, CPHA=0)[0m
+[0;32mI (343) SPI_MASTER: Packet Size: 18 bytes (9 words)[0m
+[0;32mI (353) SPI_MASTER: GPIO Pins:[0m
+[0;32mI (353) SPI_MASTER:   MISO:      GPIO2[0m
+[0;32mI (353) SPI_MASTER:   MOSI:      GPIO7[0m
+[0;32mI (363) SPI_MASTER:   SCLK:      GPIO6[0m
+[0;32mI (363) SPI_MASTER:   CS:        GPIO10[0m
+[0;32mI (363) SPI_MASTER: Performance:[0m
+[0;32mI (373) SPI_MASTER:   Transfer Time: 144 us[0m
+[0;32mI (373) SPI_MASTER:   Max Frequency: 6944 Hz[0m
+[0;32mI (373) SPI_MASTER: ================================[0m
+[0;32mI (383) SPI_MASTER: SPI Master initialized successfully[0m
+[0;32mI (403) SPI_TEST: Performance Results:[0m
+[0;32mI (403) SPI_TEST:   Transactions: 100[0m
+[0;32mI (403) SPI_TEST:   Total time: 18116 us[0m
+[0;32mI (403) SPI_TEST:   Average time: 181 us per transaction[0m
+[0;32mI (413) SPI_TEST:   Theoretical minimum: 144 us[0m
+[0;32mI (413) SPI_TEST:   Efficiency: 79.6%[0m
+[0;32mI (413) SPI_TEST:   Throughput: 5524.9 transactions/sec[0m
+[0;32mI (423) SPI_TEST: ✓ Performance test PASSED[0m
+[0;32mI (423) SPI_TEST: === SPI Self-Tests COMPLETED SUCCESSFULLY ===[0m
+SPI self-tests completed successfully
+[0;32mI (433) SPI_MASTER: SPI Master already initialized[0m
+SPI Master ready for full-duplex communication
+To test hardware: connect GPIO2 (MISO) to GPIO7 (MOSI)
+[0;32mI (453) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (453) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (463) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (473) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (503) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (613) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (713) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (713) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (713) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (723) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (753) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (863) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (963) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (963) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (963) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (973) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (1003) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (1113) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (1213) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (1213) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (1213) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (1223) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (1253) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (1363) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (1463) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (1463) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (1463) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (1473) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (1503) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (1613) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (1713) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (1713) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (1713) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (1723) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (1753) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (1863) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (1963) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (1963) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (1963) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (1973) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (2003) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (2113) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (2213) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (2213) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (2213) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (2223) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (2253) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (2363) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (2463) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (2463) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (2463) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (2473) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (2503) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (2613) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (2713) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (2713) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (2713) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (2723) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (2753) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (2863) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+SPI Stats: 130 transfers, 0 errors
+[0;32mI (2963) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (2963) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (2963) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (2973) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (3003) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (3113) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (3213) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (3213) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (3213) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (3223) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (3253) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (3363) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (3463) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (3463) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (3463) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (3473) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (3503) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (3613) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (3713) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (3713) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (3713) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (3723) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (3753) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (3863) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (3963) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (3963) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (3963) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (3973) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (4003) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (4113) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (4213) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (4213) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (4213) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (4223) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (4253) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (4363) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (4463) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (4463) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (4463) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (4473) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (4503) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (4613) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (4713) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (4713) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (4713) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (4723) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (4753) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (4863) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (4963) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (4963) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (4963) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (4973) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (5003) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (5113) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (5213) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (5213) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (5213) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (5223) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (5253) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (5363) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+SPI Stats: 160 transfers, 0 errors
+[0;32mI (5463) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (5463) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (5463) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (5473) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (5503) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (5613) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (5713) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (5713) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (5713) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (5723) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (5753) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (5863) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (5963) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (5963) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (5963) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (5973) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (6003) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (6113) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (6213) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (6213) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (6213) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (6223) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (6253) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (6363) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (6463) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (6463) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (6463) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (6473) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (6503) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (6613) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (6713) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (6713) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (6713) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (6723) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (6753) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (6863) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (6963) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (6963) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (6963) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (6973) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (7003) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (7113) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (7213) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (7213) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (7213) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (7223) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (7253) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (7363) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (7463) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (7463) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (7463) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (7473) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (7503) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (7613) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (7713) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (7713) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (7713) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (7723) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (7753) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (7863) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+SPI Stats: 190 transfers, 0 errors
+[0;32mI (7963) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (7963) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (7963) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (7973) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (8003) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (8113) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (8213) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (8213) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (8213) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (8223) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (8253) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (8363) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (8463) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (8463) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (8463) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (8473) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (8503) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (8613) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (8713) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (8713) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (8713) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (8723) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (8753) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (8863) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (8963) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (8963) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (8963) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (8973) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (9003) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (9113) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (9213) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (9213) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (9213) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (9223) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (9253) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (9363) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (9463) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (9463) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (9463) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (9473) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (9503) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (9613) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (9713) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (9713) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (9713) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (9723) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (9753) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (9863) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (9963) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (9963) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (9963) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (9973) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (10003) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (10113) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (10213) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (10213) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (10213) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (10223) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (10253) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (10363) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+SPI Stats: 220 transfers, 0 errors
+[0;32mI (10463) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (10463) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (10463) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (10473) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (10503) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (10613) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (10713) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (10713) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (10713) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (10723) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (10753) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (10863) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (10963) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (10963) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (10963) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (10973) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (11003) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (11113) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (11213) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (11213) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (11213) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (11223) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (11253) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (11363) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (11463) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (11463) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (11463) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (11473) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (11503) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (11613) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (11713) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (11713) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (11713) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (11723) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (11753) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (11863) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (11963) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (11963) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (11963) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (11973) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (12003) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (12113) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (12213) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (12213) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (12213) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (12223) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (12253) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (12363) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (12463) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (12463) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (12463) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (12473) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (12503) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (12613) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (12713) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (12713) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (12713) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (12723) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (12753) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (12863) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+SPI Stats: 250 transfers, 0 errors
+[0;32mI (12963) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (12963) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (12963) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (12973) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (13003) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (13113) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (13213) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (13213) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (13213) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (13223) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (13253) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (13363) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (13463) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (13463) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (13463) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (13473) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (13503) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (13613) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (13713) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (13713) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (13713) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (13723) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (13753) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (13863) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (13963) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (13963) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (13963) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (13973) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (14003) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
+[1;31mE (14113) SPI_MASTER: StateRequest failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+StateRequest FAILED
+[0;32mI (14213) SPI_MASTER: RX Raw Words: [0x00A0, 0x1111, 0x2222, 0x3333, 0x4444, 0x5555, 0x6666, 0x7777, 0x8888][0m
+[0;32mI (14213) SPI_MASTER: RX Raw Bytes: [A0 00 11 11 22 22 33 33 44 44 55 55 66 66 77 77 88 88][0m
+[0;32mI (14213) SPI_MASTER: Manual Parse - Counter: 0x11112222 (286335522), Float Hex: [0x33334444, 0x55556666, 0x77778888][0m
+[0;32mI (14223) SPI_MASTER: StateRequest OK - Status: 0x00A0, Counter: 286335522, Values: 0.000, 14664735916032.000, 5020572292165238247557039615115264.000[0m
+StateRequest OK - Counter: 286335522, Sensors: [0.000, 14664735916032.000, 5020572292165238247557039615115264.000]
+[1;31mE (14253) SPI_MASTER: Action command failed - Status: 0x00E0 (Communication Error - unexpected sequence)[0m
+Action FAILED
