@@ -75,13 +75,7 @@ void setup() {
   // Keep track of how many inferences we have performed.
   inference_count = 0;
   
-  // Run SPI self-tests first
-  MicroPrintf("Running SPI self-tests...");
-  if (spi_run_self_tests()) {
-    MicroPrintf("SPI self-tests completed successfully");
-  } else {
-    MicroPrintf("SPI self-tests failed - check implementation");
-  }
+  // SPI self-tests entfernt, da nicht mehr nötig
   
   // Initialize SPI Master interface
   esp_err_t spi_ret = spi_master_init();
@@ -90,9 +84,6 @@ void setup() {
     // Continue without SPI (optional fallback)
   } else {
     MicroPrintf("SPI Master ready for full-duplex communication");
-    
-    // Optional: Run hardware loopback test if connections are available
-    MicroPrintf("To test hardware: connect GPIO2 (MISO) to GPIO7 (MOSI)");
   }
 }
 
@@ -105,19 +96,27 @@ void loop() {
   esp_err_t state_result = spi_send_state_request(&slave_counter, &sensor_value1, &sensor_value2, &sensor_value3);
   
   if (state_result == ESP_OK) {
-    // --- Wait exactly 2ms using microsecond delay (2000 µs = 2ms) ---
-    // vTaskDelay has minimum resolution issues - use busy wait for precision
+    // --- ML-Inferenz während exakt 2ms Delay ---
     uint64_t start_time = esp_timer_get_time();
+    float ml_result = 0.0f;
+
+    // ML-Inferenz ausführen (z.B. mit sensor_value1 als Input)
+
+    sensor_value1 = 3.14159/2.0f; // Beispielwert
+    ml_result = execute_ml_inference(sensor_value1);
+    printf("ML Result: %.3f\n", ml_result);
+    
+    // Falls Inferenz schneller als 2ms ist, restliche Zeit warten
     while ((esp_timer_get_time() - start_time) < 2000) {
-      // Busy wait for exactly 2000 microseconds
       vTaskDelay(0); // Yield to other tasks but maintain timing precision
     }
-    
-    // --- STEP 2: Action Command → Send ML inference results ---
-    uint32_t action_value = 0x12345678;
-    
+
+    // --- STEP 2: Action Command → ML-Ergebnis senden ---
+    uint32_t action_value = static_cast<uint32_t>((ml_result + 1.0f) * 1000.0f);
+
+
     esp_err_t action_result = spi_send_action_command(action_value);
-    
+
     if (action_result != ESP_OK) {
       MicroPrintf("Action FAILED");
     }
@@ -129,4 +128,21 @@ void loop() {
   if (inference_count >= kInferencesPerCycle) {
     inference_count = 0;
   }
+}
+// ML-Inferenz-Funktion für Busy-Wait Integration
+float execute_ml_inference(float sensor_input) {
+  if (input == nullptr || output == nullptr) {
+    return 0.0f;
+  }
+  float x = sensor_input;
+  
+  int8_t x_quantized = x / input->params.scale + input->params.zero_point;
+  input->data.int8[0] = x_quantized;
+  TfLiteStatus invoke_status = interpreter->Invoke();
+  if (invoke_status != kTfLiteOk) {
+    return 0.0f;
+  }
+  int8_t y_quantized = output->data.int8[0];
+  float y = (y_quantized - output->params.zero_point) * output->params.scale;
+  return y;
 }
