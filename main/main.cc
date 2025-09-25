@@ -22,9 +22,9 @@ extern "C" void app_main(void) {
     int cycle_count = 0;
     while (true) {
         uint64_t start = esp_timer_get_time();
-        AppCycle::run(1000); // Zyklische Verarbeitung (StateRequest, ML, Action)
+        AppCycle::run(200); // Zyklische Verarbeitung (StateRequest, ML, Action)
         cycle_count++;
-        if (cycle_count >= 1000) {
+        if (cycle_count >= 100) {
             TrajectoryBuffer::print();
             TrajectoryBuffer::clear();
             cycle_count = 0;

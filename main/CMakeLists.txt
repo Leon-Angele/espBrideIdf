@@ -4,6 +4,6 @@
 #
 
 idf_component_register(
-    SRCS main.cc main_functions.cc constants.cc output_handler.cc model.cc spi_interface.c spi_test.c trajectory_buffer.cc app_cycle.cc ml_inference.cc
+    SRCS main.cc main_functions.cc constants.cc output_handler.cc model.cc spi_interface.c spi_test.c src/trajectory_buffer.cc src/app_cycle.cc src/ml_inference.cc
     PRIV_REQUIRES spi_flash driver esp_timer
-    INCLUDE_DIRS "")
+    INCLUDE_DIRS "include")
