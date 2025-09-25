@@ -1,17 +1,4 @@
-/* Copyright 2020 The TensorFlow Authors. All Rights Reserved.
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-==============================================================================*/
 
 #include "spi_interface.h"
 #include "esp_log.h"
@@ -21,7 +8,6 @@ limitations under the License.
 #include <math.h>
 
 // Static Variables
-static const char* TAG = "SPI_MASTER";
 static spi_device_handle_t spi_device = NULL;
 static bool spi_initialized = false;
 
@@ -31,7 +17,6 @@ static uint32_t error_count = 0;
 static uint8_t sequence_counter = 0;
 
 // Private function prototypes
-static void spi_print_config(void);
 
 esp_err_t spi_master_init(void) {
     if (spi_initialized) {
@@ -63,7 +48,7 @@ esp_err_t spi_master_init(void) {
         .command_bits = 0,
         .address_bits = 0,
         .dummy_bits = 0,
-        .cs_ena_pretrans = 2,              // Keep CS active 2 cycles before trans
+        .cs_ena_pretrans = 10,              // Keep CS active 2 cycles before trans
         .cs_ena_posttrans = 2              // Keep CS active 2 cycles after trans
     };
 
@@ -205,6 +190,8 @@ esp_err_t spi_send_state_request(uint32_t* counter, float* value1, float* value2
     return ESP_OK;
 }
 
+
+
 esp_err_t spi_send_action_command(uint32_t action_value) {
     if (!spi_initialized) {
         return ESP_FAIL;
@@ -306,9 +293,7 @@ void spi_reset_stats(void) {
 
 // Private Functions
 
-static void spi_print_config(void) {
     // Removed for brevity
-}
 
 void spi_dump_command_packet(const spi_command_packet_t* packet, bool is_tx, const char* label) {
     // Removed for brevity
@@ -334,4 +319,20 @@ void spi_convert_from_big_endian(spi_command_packet_t* packet) {
         uint16_t word = packet->words[i];
         packet->words[i] = __builtin_bswap16(word);
     }
+}
+
+// --- Float "zu Big Endian" uint32_t für SPI ---
+
+uint32_t prep_sendFloat(float value) {
+    uint8_t b[4];
+    memcpy(b, &value, 4);  // Little-Endian im RAM
+
+    // zuerst "korrektes" Big Endian bauen
+    uint32_t tmp = ((uint32_t)b[3] << 24) |
+                   ((uint32_t)b[2] << 16) |
+                   ((uint32_t)b[1] << 8)  |
+                   ((uint32_t)b[0]);
+
+    // dann 16-Bit Halbwörter tauschen, damit SPI wieder zurücktauscht
+    return (tmp << 16) | (tmp >> 16);
 }

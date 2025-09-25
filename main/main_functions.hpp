@@ -1,25 +1,27 @@
-/* Copyright 2019 The TensorFlow Authors. All Rights Reserved.
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-==============================================================================*/
+#include "esp_timer.h"
 
 #ifndef TENSORFLOW_LITE_MICRO_EXAMPLES_HELLO_WORLD_MAIN_FUNCTIONS_H_
 #define TENSORFLOW_LITE_MICRO_EXAMPLES_HELLO_WORLD_MAIN_FUNCTIONS_H_
+
+#include <vector>
+struct TrajectoryEntry {
+	uint32_t slave_counter;
+	float value1;
+	float value2;
+	float value3;
+	float action;
+};
+extern std::vector<TrajectoryEntry> trajectory_buffer;
+
 
 // Expose a C friendly interface for main functions.
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+
+
+void print_trajectory_buffer();
 
 // Initializes all data needed for the example. The name is important, and needs
 // to be setup() for Arduino compatibility.

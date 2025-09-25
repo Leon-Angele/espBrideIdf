@@ -1,17 +1,3 @@
-/* Copyright 2020 The TensorFlow Authors. All Rights Reserved.
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-==============================================================================*/
 
 #ifndef SPI_INTERFACE_H
 #define SPI_INTERFACE_H
@@ -39,6 +25,7 @@ extern "C" {
 // Command Definitions
 #define SPI_CMD_STATE_REQUEST   0x0001  // Request sensor state from slave
 #define SPI_CMD_ACTION          0x0002  // Send action command to slave
+#define SPI_CMD_STOP            0x0003  // Stop command
 
 // SSC Status Code Definitions
 #define SSC_RL_STATUS_OK        0x00A0  // Communication OK - expected sequence
@@ -104,6 +91,15 @@ typedef spi_command_packet_t spi_data_packet_t;
 // Function Prototypes
 
 /**
+ * @brief Prepare float value for SPI transmission
+ *
+ * Converts float to Big Endian uint32_t for SPI transmission
+ *
+ * @return Byte Pattern ready for SPI transmission
+ */
+uint32_t prep_sendFloat(float value);
+
+/**
  * @brief Initialize SPI Master interface
  * 
  * Configures SPI2 as master with 1MHz clock, Mode 0
@@ -134,6 +130,11 @@ esp_err_t spi_master_deinit(void);
  */
 esp_err_t spi_full_duplex_exchange(spi_command_packet_t* tx_packet,
                                    spi_command_packet_t* rx_packet);
+
+
+
+// Sende SPI Reset Command
+esp_err_t spi_send_reset_command(void);
 
 /**
  * @brief Send StateRequest command and receive sensor data
