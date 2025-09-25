@@ -65,3 +65,30 @@ The previous two commands can be combined:
 ```
 idf.py --port /dev/ttyUSB0 flash monitor
 ```
+
+## Architektur-Dokumentation: Timing, Delay-Strategie und ML-Integration
+
+### Timing und Delay-Strategie
+
+- Für präzise Delays < 1ms wird eine busy-wait Schleife mit [`esp_timer_get_time()`](main/main_functions.cc:74) verwendet.
+- Die Konstante [`ACTION_DELAY_US`](main/main_functions.cc:24) steuert die gewünschte Delay-Zeit in Mikrosekunden (z.B. 500 für 0,5ms).
+- FreeRTOS `vTaskDelay()` ist für sub-ms Delays ungeeignet, da die Tickrate maximal 1ms beträgt.
+
+**Mermaid Diagramm:**
+```mermaid
+flowchart TD
+    A[StateRequest] -->|Sensordaten holen| B[ML-Inferenz]
+    B -->|busy-wait für 0,5ms| C[Action senden]
+    C --> D[Zyklusverwaltung]
+```
+
+### ML-Integration
+
+- Sensordaten werden per SPI vom Slave gelesen.
+- Die ML-Inferenz (`execute_ml_inference`) wird direkt nach StateRequest ausgeführt.
+- Nach der Inferenz wird das Ergebnis als Big Endian Float per SPI an den Slave gesendet.
+
+### Validierung
+
+- Die Delay-Logik wurde experimentell nachgewiesen und im Code integriert.
+- Die Architektur ist für Echtzeit-ML-Inferenz und präzises SPI-Timing optimiert.

@@ -9,24 +9,25 @@
 
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
-#include "main_functions.hpp"
+#include "app_cycle.hpp"
+#include "trajectory_buffer.hpp"
+#include "esp_timer.h"
 
 #define CycleTimeUs 1000 // 0.5ms Zykluszeit
 
 // ESP32 Entry Point
 extern "C" void app_main(void) {
-    setup(); // Initialisierung aller Komponenten
+    AppCycle::setup(); // Initialisierung aller Komponenten
 
     int cycle_count = 0;
     while (true) {
         uint64_t start = esp_timer_get_time();
-        loop(); // Zyklische Verarbeitung (StateRequest, ML, Action)
+        AppCycle::run(1000); // Zyklische Verarbeitung (StateRequest, ML, Action)
         cycle_count++;
-        if (cycle_count >= 10000) {
-            print_trajectory_buffer();
-            trajectory_buffer.clear();
+        if (cycle_count >= 1000) {
+            TrajectoryBuffer::print();
+            TrajectoryBuffer::clear();
             cycle_count = 0;
-
         }
         while ((esp_timer_get_time() - start) < CycleTimeUs) {
             vTaskDelay(0); // CPU-Entlastung, Task bleibt responsive
