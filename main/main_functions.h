@@ -28,7 +28,12 @@ void setup();
 // Runs one iteration of data gathering and inference. This should be called
 // repeatedly from the application code. The name needs to be loop() for Arduino
 // compatibility.
+// NOTE: This is now deprecated in favor of hardware timer callbacks
 void loop();
+
+// Execute TensorFlow Lite inference using sensor data
+// Returns the ML inference result as float
+float execute_ml_inference(float sensor_input);
 
 #ifdef __cplusplus
 }

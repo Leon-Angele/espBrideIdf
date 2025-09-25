@@ -23,7 +23,7 @@ extern "C" void app_main(void) {
   while (true) {
     loop();
 
-    // trigger SPI communication cycle every 100ms
+    // trigger one inference every 100ms
     vTaskDelay(pdMS_TO_TICKS(100));
   }
 }

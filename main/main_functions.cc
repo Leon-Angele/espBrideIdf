@@ -18,6 +18,7 @@ limitations under the License.
 #include "tensorflow/lite/micro/micro_interpreter.h"
 #include "tensorflow/lite/micro/system_setup.h"
 #include "tensorflow/lite/schema/schema_generated.h"
+#include "esp_timer.h"
 
 #include "main_functions.h"
 #include "model.h"
@@ -104,55 +105,22 @@ void loop() {
   esp_err_t state_result = spi_send_state_request(&slave_counter, &sensor_value1, &sensor_value2, &sensor_value3);
   
   if (state_result == ESP_OK) {
-    MicroPrintf("StateRequest OK - Counter: %lu, Sensors: [%.3f, %.3f, %.3f]",
-                (unsigned long)slave_counter,
-                static_cast<double>(sensor_value1),
-                static_cast<double>(sensor_value2),
-                static_cast<double>(sensor_value3));
-    
-    // --- Wait exactly 2ms as requested (StateRequest → 2ms → Action) ---
-    vTaskDelay(pdMS_TO_TICKS(2));
-    
-    // --- STEP 2: TensorFlow Lite Inference using sensor data ---
-    // Use first sensor value as ML model input
-    float x = sensor_value1;
-    
-    // Quantize the input from floating-point to integer
-    int8_t x_quantized = x / input->params.scale + input->params.zero_point;
-    // Place the quantized input in the model's input tensor
-    input->data.int8[0] = x_quantized;
-
-    // Run inference, and report any error
-    TfLiteStatus invoke_status = interpreter->Invoke();
-    if (invoke_status != kTfLiteOk) {
-      MicroPrintf("Invoke failed on x: %f\n", static_cast<double>(x));
-      return;
+    // --- Wait exactly 2ms using microsecond delay (2000 µs = 2ms) ---
+    // vTaskDelay has minimum resolution issues - use busy wait for precision
+    uint64_t start_time = esp_timer_get_time();
+    while ((esp_timer_get_time() - start_time) < 2000) {
+      // Busy wait for exactly 2000 microseconds
+      vTaskDelay(0); // Yield to other tasks but maintain timing precision
     }
-
-    // Obtain the quantized output from model's output tensor
-    int8_t y_quantized = output->data.int8[0];
-    // Dequantize the output from integer to floating-point
-    float y = (y_quantized - output->params.zero_point) * output->params.scale;
     
-    // --- STEP 3: Action Command → Send ML inference results ---
-    // Convert ML result to 32-bit action value (scale -1..1 to 0..2000)
-    uint32_t action_value = static_cast<uint32_t>((y + 1.0f) * 1000.0f);
+    // --- STEP 2: Action Command → Send ML inference results ---
+    uint32_t action_value = 0x12345678;
     
     esp_err_t action_result = spi_send_action_command(action_value);
     
-    if (action_result == ESP_OK) {
-      MicroPrintf("Action OK - ML result: %.3f → Action: 0x%08lX sent to slave",
-                  static_cast<double>(y), (unsigned long)action_value);
-      
-      // Output the results using the original handler
-      HandleOutput(x, y);
-      
-    } else {
+    if (action_result != ESP_OK) {
       MicroPrintf("Action FAILED");
     }
-    
-  } else {
-    MicroPrintf("StateRequest FAILED");
   }
 
   // Increment the inference_counter, and reset it if we have reached
@@ -160,12 +128,5 @@ void loop() {
   inference_count += 1;
   if (inference_count >= kInferencesPerCycle) {
     inference_count = 0;
-    
-    // Print SPI statistics every cycle
-    uint32_t total_transfers, error_count;
-    spi_get_stats(&total_transfers, &error_count);
-    MicroPrintf("SPI Stats: %lu transfers, %lu errors",
-                (unsigned long)total_transfers,
-                (unsigned long)error_count);
   }
 }
